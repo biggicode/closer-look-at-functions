@@ -11,5 +11,12 @@ const poll = {
         `${this.question}\n${this.options.join("\n")}\nWrite option number`
       )
     )
+
+    userInput < this.answers.length &&
+      typeof userInput === "number" &&
+      this.answers[userInput]++
+    console.log(this.answers)
   },
 }
+
+poll.registerNewAnswer()
