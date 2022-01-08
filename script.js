@@ -15,7 +15,14 @@ const poll = {
     userInput < this.answers.length &&
       typeof userInput === "number" &&
       this.answers[userInput]++
-    console.log(this.answers)
+    this.displayResults("array")
+    this.displayResults("stringulet")
+  },
+
+  displayResults(type) {
+    type === "array"
+      ? console.log(this.answers)
+      : console.log(`Poll result are ${this.answers.join(", ")}`)
   },
 }
 
